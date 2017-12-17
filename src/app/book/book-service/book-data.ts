@@ -1,0 +1,128 @@
+/**
+ * 
+ * sample data
+ */
+import { Book } from './book';
+
+export const BOOK_LIST: Book[] = [
+          {
+              "id":1,
+          "isbn": "9781593275846",
+          "title": "Eloquent JavaScript, Second Edition",
+          "subtitle": "A Modern Introduction to Programming",
+          "author": "Marijn Haverbeke",
+          "publisher": "No Starch Press",
+          "pages": 472,
+          
+        },
+        {
+            "id":2,
+          "isbn": "9781449331818",
+          "title": "Learning JavaScript Design Patterns",
+          "subtitle": "A JavaScript and jQuery Developer's Guide",
+          "author": "Addy Osmani",
+          "publisher": "O'Reilly Media",
+          "pages": 254,         
+        },
+        {
+            "id":3,
+          "isbn": "9781449365035",
+          "title": "Speaking JavaScript",
+          "subtitle": "An In-Depth Guide for Programmers",
+          "author": "Axel Rauschmayer",
+          "publisher": "O'Reilly Media",
+          "pages": 460,         
+        },
+        {
+            "id":4,
+          "isbn": "9781491950296",
+          "title": "Programming JavaScript Applications",
+          "subtitle": "Robust Web Architecture with Node, HTML5, and Modern JS Libraries",
+          "author": "Eric Elliott",
+          "publisher": "O'Reilly Media",
+          "pages": 254,          
+        },
+        {
+            "id":5,
+          "isbn": "9781593277574",
+          "title": "Understanding ECMAScript 6",
+          "subtitle": "The Definitive Guide for JavaScript Developers",
+          "author": "Nicholas C. Zakas",
+          "publisher": "No Starch Press",
+          "pages": 352,         
+        },
+        {
+            "id":6,
+          "isbn": "9781491904244",
+          "title": "You Don't Know JS",
+          "subtitle": "ES6 & Beyond",
+          "author": "Kyle Simpson",
+           "publisher": "O'Reilly Media",
+          "pages": 278,
+        },
+        {
+            "id":7,
+          "isbn": "9781449325862",
+          "title": "Git Pocket Guide",
+          "subtitle": "A Working Introduction",
+          "author": "Richard E. Silverman",
+          "publisher": "O'Reilly Media",
+          "pages": 234,
+        },
+        {
+            "id":8,
+          "isbn": "9781449337711",
+          "title": "Designing Evolvable Web APIs with ASP.NET",
+          "subtitle": "Harnessing the Power of the Web",
+          "author": "Glenn Block, et al.",
+           "publisher": "O'Reilly Media",
+          "pages": 538,
+         },
+         {
+            "id":9,
+        "isbn": "9781593275846",
+        "title": "Eloquent JavaScript, Second Edition",
+        "subtitle": "A Modern Introduction to Programming",
+        "author": "Marijn Haverbeke",
+        "publisher": "No Starch Press",
+        "pages": 472,
+        
+      },
+      {
+          "id":10,
+        "isbn": "9781449331818",
+        "title": "Learning JavaScript Design Patterns",
+        "subtitle": "A JavaScript and jQuery Developer's Guide",
+        "author": "Addy Osmani",
+        "publisher": "O'Reilly Media",
+        "pages": 254,         
+      },
+      {
+          "id":11,
+        "isbn": "9781449365035",
+        "title": "Speaking JavaScript",
+        "subtitle": "An In-Depth Guide for Programmers",
+        "author": "Axel Rauschmayer",
+        "publisher": "O'Reilly Media",
+        "pages": 460,         
+      },
+      {
+          "id":12,
+        "isbn": "9781491950296",
+        "title": "Programming JavaScript Applications",
+        "subtitle": "Robust Web Architecture with Node, HTML5, and Modern JS Libraries",
+        "author": "Eric Elliott",
+        "publisher": "O'Reilly Media",
+        "pages": 254,          
+      },
+      {
+          "id":13,
+        "isbn": "9781593277574",
+        "title": "Understanding ECMAScript 6",
+        "subtitle": "The Definitive Guide for JavaScript Developers",
+        "author": "Nicholas C. Zakas",
+        "publisher": "No Starch Press",
+        "pages": 352,         
+      },
+      
+]

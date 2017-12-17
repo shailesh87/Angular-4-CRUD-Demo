@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Book List</h1>
+    <a class="btn btn-primary" [routerLink]="['new']"><span class="glyphicon glyphicon-plus"></span> Add Book</a>
+      <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center" >ID</th>
+        <th class="text-center">ISBN</th>
+        <th class="text-center">Title</th>
+        <th class="text-center">Subtitle</th>
+        <th class="text-center">Author</th>
+        <th class="text-center">Pages</th>
+        <th class="text-center">Publisher</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of pagedItems">
+        <td>{{ book.id }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.subtitle }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.pages }}</td>
+        <td>{{ book.publisher }}</td>
+        <td>
+            <div class="btn-group" role="group">
+          <a class="btn btn-primary" [routerLink]="['edit', book.id]"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a class="btn btn-danger" (click)="removeBook(book)"><span class="glyphicon glyphicon-remove-sign"></span></a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+   <!-- pager -->
+ <ul *ngIf="pager.pages && pager.pages.length" class=" pager">
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a  [routerLink]="['/books']" [queryParams]="{ page: 1}">First</a>
+
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage - 1}">Previous</a>
+    </li>
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+        <!-- <a (click)="setPage(page)">{{page}}</a> -->
+        <a [routerLink]="['/books']" [queryParams]="{ page: page}">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage + 1}" >Next</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.totalPages}" >Last</a>
+    </li>
+</ul>
+  </div>
+</div>
