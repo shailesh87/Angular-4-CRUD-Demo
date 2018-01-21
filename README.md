@@ -8,6 +8,14 @@
 > npm install
 
 ```
+## in linux os
+
+```bash
+> sudo npm install -g --unsafe-perm --verbose @angular/cli
+> sudo npm install -g typescript --unsafe-perm
+> sudo npm install --unsafe-perm
+
+```
 
 ## Running the demo
 
