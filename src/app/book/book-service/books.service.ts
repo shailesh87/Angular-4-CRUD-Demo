@@ -14,7 +14,7 @@ export class BooksService {
  * 
  */
   getBookFromData():Book[]{
-    console.log(this.booklist);
+    // console.log(this.booklist);
     return this.booklist.sort(this.compareValues('title'));
   }
 /**
@@ -24,14 +24,14 @@ export class BooksService {
  */
   addBook(book:Book){
     this.booklist.push(book);
-    console.log(this.booklist);
+    // console.log(this.booklist);
 
   }
   updateBook(book:Book){
     let index=findIndex(this.booklist,(u:Book)=>{
       return u.id=== book.id;
     })
-    console.log(book);
+    // console.log(book);
     this.booklist[index]=book;
   }
   /**
@@ -41,7 +41,7 @@ export class BooksService {
    */
   deleteBook(book:Book){
     this.booklist.splice(this.booklist.indexOf(book),1);
-    console.log(this.booklist);
+    // console.log(this.booklist);
   }
   /**
    * return book data by id
