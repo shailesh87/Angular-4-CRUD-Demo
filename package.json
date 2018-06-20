@@ -21,8 +21,10 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "bootstrap": "^3.3.7",
+    "angular-font-awesome": "^3.1.2",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "rxjs": "^5.5.2",
     "underscore": "^1.8.3",
     "zone.js": "^0.8.14"

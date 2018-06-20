@@ -1,7 +1,12 @@
 <div class="container">
   <div class="col-md-12">
-    <h1>Book List</h1>
-    <a class="btn btn-primary" [routerLink]="['new']"><span class="glyphicon glyphicon-plus"></span> Add Book</a>
+  <div class="col-md-8">
+     <h1 class="mt-0">Book List</h1>
+  </div> 
+  <div class="col-md-4">
+    <a class="btn btn-lg btn-primary pull-right mt-1" [routerLink]="['new']" type="button"><span class="glyphicon glyphicon-plus"></span> Add Book</a>
+  </div>
+    
       <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
@@ -26,32 +31,33 @@
         <td>{{ book.publisher }}</td>
         <td>
             <div class="btn-group" role="group">
-          <a class="btn btn-primary" [routerLink]="['edit', book.id]"><span class="glyphicon glyphicon-pencil"></span></a>
-          <a class="btn btn-danger" (click)="removeBook(book)"><span class="glyphicon glyphicon-remove-sign"></span></a>
+          <a class="btn btn-primary" [routerLink]="['edit', book.id]"><fa name="pencil"></fa></a>
+          <a class="btn btn-danger" (click)="removeBook(book)"><fa name="remove"></fa></a>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
    <!-- pager -->
- <ul *ngIf="pager.pages && pager.pages.length" class=" pager">
+   <nav aria-label="Page navigation example"> 
+ <ul *ngIf="pager.pages && pager.pages.length" class=" pagination justify-content-center">
     <li [ngClass]="{disabled:pager.currentPage === 1}">
-        <a  [routerLink]="['/books']" [queryParams]="{ page: 1}">First</a>
+        <a  [routerLink]="['/books']" [queryParams]="{ page: 1}" class="page-link">First</a>
 
     </li>
-    <li [ngClass]="{disabled:pager.currentPage === 1}">
-        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage - 1}">Previous</a>
+    <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage - 1}" class="page-link">Previous</a>
     </li>
-    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
         <!-- <a (click)="setPage(page)">{{page}}</a> -->
-        <a [routerLink]="['/books']" [queryParams]="{ page: page}">{{page}}</a>
+        <a [routerLink]="['/books']" [queryParams]="{ page: page}" class="page-link">{{page}}</a>
     </li>
-    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage + 1}" >Next</a>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.currentPage + 1}" class="page-link">Next</a>
     </li>
-    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-        <a [routerLink]="['/books']" [queryParams]="{ page: pager.totalPages}" >Last</a>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+        <a [routerLink]="['/books']" [queryParams]="{ page: pager.totalPages}" class="page-link">Last</a>
     </li>
-</ul>
+</ul></nav>
   </div>
 </div>

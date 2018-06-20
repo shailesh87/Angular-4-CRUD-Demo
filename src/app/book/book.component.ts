@@ -43,6 +43,14 @@ export class BookComponent implements OnInit {
     
   }
   /**
+   * Delete the book from the list
+   * @param book 
+   */
+  removeBook(book){
+    this.bookService.deleteBook(book);
+    this.getBooks();
+  }
+  /**
    * Handel the pagination
    * @param page 
    * 

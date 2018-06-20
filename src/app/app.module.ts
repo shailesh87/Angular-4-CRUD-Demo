@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -31,7 +32,8 @@ import { OrderByPipe } from './order-by.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+	AngularFontAwesomeModule
   ],
   providers: [BooksService,PagerService],
   bootstrap: [AppComponent]
