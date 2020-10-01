@@ -1,4 +1,4 @@
-# Angular-CRUD-Demo
+# Angular-4-CRUD-Demo (using localstorage)
 
 ## Building this project
 **BEFORE YOU INSTALL:** please read the [angular-cli](https://github.com/angular/angular-cli)
